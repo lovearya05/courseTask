@@ -11,7 +11,7 @@ import UpcommingVideos from "./UpcommingVideos";
 import Header from "./Header";
 
 const PlayVideo = () => {
-  const [currentTime, setCurrentTime] = useState(30);
+  const [currentTime, setCurrentTime] = useState(80);
 
   return (
     <View style={{ flex: 1 }}>
@@ -122,9 +122,7 @@ const PlayVideo = () => {
         <View style={styles.controlsContainer}>
           {/* Progress Bar */}
           <View style={styles.progressBar}>
-            <View
-              style={[styles.progressBarFill, { width: `${currentTime}%` }]}
-            />
+            <View style={[styles.progressBarFill, { width: currentTime }]} />
             <View
               style={{
                 height: 12,
@@ -132,7 +130,9 @@ const PlayVideo = () => {
                 backgroundColor: "red",
                 borderRadius: 100,
                 top: -8,
-                left: 100,
+                left: currentTime,
+                // width: `${currentTime}%`,
+                // left: 100,
               }}
             ></View>
           </View>
@@ -217,7 +217,7 @@ const PlayVideo = () => {
           <TouchableOpacity style={{ ...styles.threeButton }}>
             <AntDesign name="calendar" size={22} color="rgba(1,1,1, 0.6)" />
             <Text
-              style={{ marginLeft: 2, fontSize: 14, color: "rgba(1,1,1, 0.6)" }}
+              style={{ marginLeft: 5, fontSize: 14, color: "rgba(1,1,1, 0.6)" }}
             >
               Save Notes
             </Text>
@@ -226,7 +226,7 @@ const PlayVideo = () => {
           <TouchableOpacity style={{ ...styles.threeButton, marginLeft: 10 }}>
             <Fontisto name="commenting" size={22} color="rgba(1,1,1, 0.6)" />
             <Text
-              style={{ marginLeft: 2, fontSize: 14, color: "rgba(1,1,1, 0.6)" }}
+              style={{ marginLeft: 5, fontSize: 14, color: "rgba(1,1,1, 0.6)" }}
             >
               Comments(456)
             </Text>
@@ -239,7 +239,7 @@ const PlayVideo = () => {
               color="rgba(1,1,1, 0.6)"
             />
             <Text
-              style={{ marginLeft: 2, fontSize: 14, color: "rgba(1,1,1, 0.6)" }}
+              style={{ marginLeft: 5, fontSize: 14, color: "rgba(1,1,1, 0.6)" }}
             >
               Share
             </Text>
@@ -321,7 +321,7 @@ const styles = StyleSheet.create({
   videoThumbnail: {
     width: "100%",
     height: 250,
-    resizeMode: "cover",
+    // resizeMode: "cover",
   },
   playPauseButton: {
     position: "absolute",
@@ -339,8 +339,8 @@ const styles = StyleSheet.create({
   playPauseIcon: {
     width: 40,
     height: 40,
-    resizeMode: "contain",
-    tintColor: "#fff",
+    // resizeMode: "contain",
+    // tintColor: "#fff",
   },
   currentTimeText: {
     position: "absolute",
@@ -377,8 +377,8 @@ const styles = StyleSheet.create({
   fullscreenIcon: {
     width: 24,
     height: 24,
-    resizeMode: "contain",
-    tintColor: "#fff",
+    // resizeMode: "contain",
+    // tintColor: "#fff",
     // bottom: -22,
     // right:-410
   },
