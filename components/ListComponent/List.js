@@ -13,7 +13,7 @@ const List = ({
   const navigation = useNavigation();
 
   const goPage = () => {
-    navigation.navigate(`${urlName}`,{subjecTitle: subjectTitle});
+    navigation.navigate(`${urlName}`, { subjecTitle: subjectTitle });
   };
 
   return (

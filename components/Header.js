@@ -9,11 +9,11 @@ import React from "react";
 import { AntDesign, Feather, Entypo } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const Header = ({ headerName, icon, name }) => {
+const Header = ({ headerName, icon, searchIcon, name }) => {
   const navigation = useNavigation();
 
   const goBack = () => {
-    if(!name){
+    if (!name) {
       navigation.goBack();
     }
   };
@@ -65,7 +65,9 @@ const Header = ({ headerName, icon, name }) => {
             marginRight: 10,
           }}
         >
-          <Feather name="search" size={20} color="black" />
+          {searchIcon ? (
+            <Feather name="search" size={20} color="black" />
+          ) : null}
           {icon ? (
             <Entypo
               name="dots-three-vertical"
