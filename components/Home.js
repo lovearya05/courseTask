@@ -10,6 +10,8 @@ const Home = ({ navigation }) => {
   const handlePress = () => {
     setIsClicked(!isClicked);
   };
+  const urlName = "Subject";
+
   return (
     <View>
       <Header headerName="" icon={true} />
@@ -55,21 +57,25 @@ const Home = ({ navigation }) => {
           <List
             subjectTitle="Chemistry Organic"
             lectureCount="316"
+            urlName={urlName}
             description="316 free lectures by neeraj Saini Sir(Msc. Chemistry)"
           />
           <List
             lectureCount="405"
+            urlName={urlName}
             subjectTitle="Chemistry (Physical & Inorganic)"
             description="405 free lectures by Alok kumar Sir(Ex. ISRO Scientist)"
           />
           <List
             subjectTitle="Physics"
             lectureCount="435"
+            urlName={urlName}
             description="435 free lectures by Amit Bijarnia Sir(IIT Delhi)"
           />
           <List
             subjectTitle="Chemistry Organic"
             lectureCount="1300+"
+            urlName={urlName}
             description="free lectures by Mohit  Sir(IIT Delhi)"
           />
         </View>

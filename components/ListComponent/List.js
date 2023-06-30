@@ -2,9 +2,23 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { AntDesign } from "@expo/vector-icons";
 import Tag from "./Tag";
-const List = ({ lectureCount, chapter, subjectTitle, description }) => {
+import { useNavigation } from "@react-navigation/native";
+const List = ({
+  urlName,
+  lectureCount,
+  chapter,
+  subjectTitle,
+  description,
+}) => {
+  const navigation = useNavigation();
+
+  const goPage = () => {
+    navigation.navigate(`${urlName}`);
+  };
+
   return (
     <TouchableOpacity
+      onPress={goPage}
       style={{ backgroundColor: "#FFF", marginBottom: 5, padding: 10 }}
     >
       <View>

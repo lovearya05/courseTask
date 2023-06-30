@@ -1,8 +1,22 @@
-import { StatusBar, StyleSheet, Text, View } from "react-native";
+import {
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React from "react";
 import { AntDesign, Feather, Entypo } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const Header = ({ headerName, icon }) => {
+  const navigation = useNavigation();
+
+  const goBack = () => {
+    if (headerName !== "") {
+      navigation.goBack();
+    }
+  };
   return (
     <View>
       <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
@@ -27,14 +41,16 @@ const Header = ({ headerName, icon }) => {
             alignItems: "center",
           }}
         >
-          <AntDesign
-            name="left"
-            size={20}
-            style={{
-              marginLeft: 0,
-            }}
-            color="black"
-          />
+          <TouchableOpacity onPress={goBack}>
+            <AntDesign
+              name="left"
+              size={20}
+              style={{
+                marginLeft: 0,
+              }}
+              color="black"
+            />
+          </TouchableOpacity>
           <Text style={{ fontSize: 20, marginLeft: 10, fontWeight: "500" }}>
             {headerName.length > 11
               ? `${headerName.slice(0, 11)}...`

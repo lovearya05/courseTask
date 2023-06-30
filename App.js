@@ -21,6 +21,11 @@ export default function App() {
           component={Home}
           options={{ headerShown: false }}
         />
+        {/* <Stack.Screen
+          name="Home" // change the name of Youtube
+          component={Home} // paste the youtube component
+          options={{ headerShown: false }}
+        /> */}
         <Stack.Screen
           name="VideoList"
           component={VideoList}
