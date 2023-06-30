@@ -15,7 +15,7 @@ export default function App() {
   return (
     <NavigationContainer>
 
-    {/* <Stack.Navigator>
+    <Stack.Navigator>
       <Stack.Screen name="login" component={Login} />
       <Stack.Screen name="Home"  component={Home}
       
@@ -33,7 +33,7 @@ export default function App() {
        />
       <Stack.Screen name="showResult" component={ShowResult} />
       
-    </Stack.Navigator> */}
+    </Stack.Navigator>
 
     </NavigationContainer>
   );  
