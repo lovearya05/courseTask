@@ -8,6 +8,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import UpcommingVideos from './UpcommingVideos';
+import Header from './Header';
 
 
 const PlayVideo = () => {
@@ -19,10 +20,12 @@ const PlayVideo = () => {
   return (
     <View>
 
+      <Header headerName="" icon={true} />
+
       {/* navbar  */}
-      <View style={{ backgroundColor: 'white', height: 80, justifyContent: 'center', flexDirection: "column-reverse" }} >
+      {/* <View style={{ backgroundColor: 'white', height: 80, justifyContent: 'center', flexDirection: "column-reverse" }} >
         <AntDesign name="left" size={24} color="black" style={{ marginTop: 15, marginLeft: 15 }} />
-      </View>
+      </View> */}
 
       {/* video  */}
       <View style={styles.container}>
@@ -202,7 +205,7 @@ export default PlayVideo
 const styles = StyleSheet.create({
   container: {
     // flex: 1,
-    marginTop: 115,
+    marginTop: 125,
     backgroundColor: '#000',
   },
   videoContainer: {

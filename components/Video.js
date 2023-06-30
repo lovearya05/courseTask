@@ -2,10 +2,19 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const Video = ({ image }) => {
+  const navigation = useNavigation();
+
+  const goPage = () => {
+    // alert("hloe");
+    navigation.navigate(`Youtube`);
+  };
+
   return (
     <TouchableOpacity
+      onPress={goPage}
       style={{
         paddingLeft: 10,
         paddingRight: 10,
@@ -65,7 +74,7 @@ const Video = ({ image }) => {
           }}
         >
           <Text style={{ fontSize: 14, color: "#AAA", width: "35%" }}>
-            83.33 MIN
+            83.25 MIN
           </Text>
           <View
             style={{

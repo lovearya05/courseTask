@@ -8,6 +8,7 @@ const Lectures = () => {
   const handleToggleSwitch = () => {
     setShowPendingVideos(!showPendingVideos);
   };
+
   return (
     <View style={{ backgroundColor: "#FFF", marginTop: 10 }}>
       <View style={styles.container}>

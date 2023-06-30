@@ -2,9 +2,23 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { AntDesign } from "@expo/vector-icons";
 import Tag from "./Tag";
-const List = ({ lectureCount, chapter, subjectTitle, description }) => {
+import { useNavigation } from "@react-navigation/native";
+const List = ({
+  urlName,
+  lectureCount,
+  chapter,
+  subjectTitle,
+  description,
+}) => {
+  const navigation = useNavigation();
+
+  const goPage = () => {
+    navigation.navigate(`${urlName}`,{subjecTitle: subjectTitle});
+  };
+
   return (
     <TouchableOpacity
+      onPress={goPage}
       style={{ backgroundColor: "#FFF", marginBottom: 5, padding: 10 }}
     >
       <View>
@@ -70,20 +84,20 @@ const List = ({ lectureCount, chapter, subjectTitle, description }) => {
               {chapter ? (
                 <Tag
                   title={`${chapter} Chapters`}
-                  backColor="#AEE2FF"
+                  backColor="#d6eef1"
                   textColor="#8696FE"
                 />
               ) : null}
               {lectureCount ? (
                 <Tag
                   title={`${lectureCount} Videos`}
-                  backColor="#C4B0FF"
+                  backColor="#e8e2f6"
                   textColor="#654E92"
                 />
               ) : null}
               <Tag
                 title="45 Live videos"
-                backColor="#97DEFF"
+                backColor="#d4e3f6"
                 textColor="#009FBD"
               />
             </View>
