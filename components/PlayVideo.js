@@ -11,7 +11,7 @@ import UpcommingVideos from "./UpcommingVideos";
 import Header from "./Header";
 
 const PlayVideo = () => {
-  const [currentTime, setCurrentTime] = useState(80);
+  const [currentTime, setCurrentTime] = useState(70);
 
   return (
     <View style={{ flex: 1 }}>
@@ -211,13 +211,15 @@ const PlayVideo = () => {
             justifyContent: "space-evenly",
             flexDirection: "row",
             width: "100%",
+            paddingLeft:12,
+            paddingRight:12
             // justifyContent: "flex-start",
           }}
         >
           <TouchableOpacity style={{ ...styles.threeButton }}>
             <AntDesign name="calendar" size={22} color="rgba(1,1,1, 0.6)" />
             <Text
-              style={{ marginLeft: 5, fontSize: 14, color: "rgba(1,1,1, 0.6)" }}
+              style={{ marginLeft: 5, fontSize: 16, color: "rgba(1,1,1, 0.6)" }}
             >
               Save Notes
             </Text>
@@ -226,7 +228,7 @@ const PlayVideo = () => {
           <TouchableOpacity style={{ ...styles.threeButton, marginLeft: 10 }}>
             <Fontisto name="commenting" size={22} color="rgba(1,1,1, 0.6)" />
             <Text
-              style={{ marginLeft: 5, fontSize: 14, color: "rgba(1,1,1, 0.6)" }}
+              style={{ marginLeft: 5, fontSize: 16, color: "rgba(1,1,1, 0.6)" }}
             >
               Comments(456)
             </Text>
@@ -239,7 +241,7 @@ const PlayVideo = () => {
               color="rgba(1,1,1, 0.6)"
             />
             <Text
-              style={{ marginLeft: 5, fontSize: 14, color: "rgba(1,1,1, 0.6)" }}
+              style={{ marginLeft: 5, fontSize: 16, color: "rgba(1,1,1, 0.6)" }}
             >
               Share
             </Text>

@@ -17,7 +17,7 @@ const Video = ({ image }) => {
       onPress={goPage}
       style={{
         paddingLeft: 10,
-        paddingRight: 10,
+        // paddingRight: 10,
         paddingTop: 10,
         borderBottomColor: "#EEE",
         borderBottomWidth: 0.8,
@@ -38,7 +38,7 @@ const Video = ({ image }) => {
             }}
           />
         </View>
-        <View style={{ width: "60%", height: 90, marginLeft: 10 }}>
+        <View style={{ width: "60%", height: 90, marginLeft: 10, paddingRight:10 }}>
           <View
             style={{
               display: "flex",
@@ -73,7 +73,7 @@ const Video = ({ image }) => {
             justifyContent: "space-between",
           }}
         >
-          <Text style={{ fontSize: 14, color: "#AAA", width: "35%" }}>
+          <Text style={{ fontSize: 14, color: "#AAA", width: "38%" }}>
             83.25 MIN
           </Text>
           <View
@@ -92,7 +92,7 @@ const Video = ({ image }) => {
                 fontSize: 13,
                 color: "grey",
                 fontWeight: "600",
-                marginLeft: 5,
+                // marginLeft: 5,
               }}
             >
               9K WATCHED
