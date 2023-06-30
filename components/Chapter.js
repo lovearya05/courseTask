@@ -12,7 +12,7 @@ const Chapter = ({ route }) => {
       <Header headerName={subjectTitle} searchIcon={true} icon={false} />
       <View style={{ marginTop: 10 }}>
         <List
-          subjectTitle="Mechanics| 10 Chapters, 121 Videos"
+          subjectTitle="Mechanics | 10 Chapters, 121 Videos"
           lectureCount="121"
           urlName={urlName}
         />
@@ -24,7 +24,7 @@ const Chapter = ({ route }) => {
         <List
           lectureCount="83"
           urlName={urlName}
-          subjectTitle="Chemstry (Physical & Inorganic)"
+          subjectTitle="Chemistry (Physical & Inorganic)"
         />
       </View>
     </View>

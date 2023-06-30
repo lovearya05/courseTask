@@ -12,7 +12,7 @@ const Subject = ({ route }) => {
       <Header headerName={`${subjectTitle}`} searchIcon={true} icon={false} />
       <View style={{ marginTop: 10 }}>
         <List
-          subjectTitle="Mechanics| 10 Chapters, 121 Videos"
+          subjectTitle="Mechanics | 10 Chapters, 121 Videos"
           lectureCount="121"
           urlName={urlName}
           chapter={10}
@@ -29,7 +29,7 @@ const Subject = ({ route }) => {
           lectureCount="83"
           urlName={urlName}
           chapter={3}
-          subjectTitle="Chemstry (Physical & Inorganic)"
+          subjectTitle="Chemistry (Physical & Inorganic)"
           description="405 free lectures by Alok kumar Sir(Ex ISRO Scientist)"
         />
       </View>
