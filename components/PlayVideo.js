@@ -175,6 +175,7 @@ const PlayVideo = () => {
             <Text style={{ marginLeft: 10, color:'rgba(1,1,1, 0.6)' }}>Share</Text>
           </View>
         </View>
+        
       </View>
 
 
