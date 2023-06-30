@@ -38,7 +38,9 @@ const Video = ({ image }) => {
             }}
           />
         </View>
-        <View style={{ width: "60%", height: 90, marginLeft: 10, paddingRight:10 }}>
+        <View
+          style={{ width: "60%", height: 90, marginLeft: 10, paddingRight: 10 }}
+        >
           <View
             style={{
               display: "flex",
@@ -63,7 +65,13 @@ const Video = ({ image }) => {
         </View>
       </View>
       <View
-        style={{ display: "flex", flexDirection: "row", alignItems: "center" }}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "100%",
+          alignItems: "center",
+          marginTop: 10,
+        }}
       >
         <View style={{ width: "38%" }}></View>
         <View
@@ -71,6 +79,7 @@ const Video = ({ image }) => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
+            width: "62%",
           }}
         >
           <Text style={{ fontSize: 14, color: "#AAA", width: "38%" }}>

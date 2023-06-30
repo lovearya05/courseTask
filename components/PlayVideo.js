@@ -211,8 +211,8 @@ const PlayVideo = () => {
             justifyContent: "space-evenly",
             flexDirection: "row",
             width: "100%",
-            paddingLeft:12,
-            paddingRight:12
+            paddingLeft: 12,
+            paddingRight: 12,
             // justifyContent: "flex-start",
           }}
         >
@@ -247,7 +247,6 @@ const PlayVideo = () => {
             </Text>
           </TouchableOpacity>
         </View>
-        
       </View>
 
       {/* upcoming video  */}
