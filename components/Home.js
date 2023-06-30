@@ -8,10 +8,9 @@ const Home = ({ navigation }) => {
   const urlName = "Subject";
   const [isClicked, setIsClicked] = useState(true);
 
-
   return (
     <View>
-      <Header headerName="" icon={true} name='Home' />
+      <Header headerName="" searchIcon={true} icon={true} name="Home" />
       <View
         style={{
           backgroundColor: "#FFF",
@@ -23,7 +22,7 @@ const Home = ({ navigation }) => {
       >
         <TouchableOpacity
           style={[!isClicked ? styles.designButton : null, { marginLeft: 10 }]}
-          onPress={()=>setIsClicked(false)}
+          onPress={() => setIsClicked(false)}
         >
           <Text
             style={[
@@ -36,7 +35,7 @@ const Home = ({ navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={[isClicked ? styles.designButton : null, { marginLeft: 10 }]}
-          onPress={()=>setIsClicked(true)}
+          onPress={() => setIsClicked(true)}
         >
           <Text
             style={[

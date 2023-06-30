@@ -3,13 +3,13 @@ import React from "react";
 import Header from "./Header";
 import List from "./ListComponent/List";
 
-const Subject = ({route}) => {  
-  const subjectTitle = route.params['subjecTitle'].split(" ")[0]
+const Subject = ({ route }) => {
+  const subjectTitle = route.params["subjecTitle"].split(" ")[0];
 
   const urlName = "Chapter";
   return (
     <View>
-      <Header headerName={`${subjectTitle}`} icon={false} />
+      <Header headerName={`${subjectTitle}`} searchIcon={true} icon={false} />
       <View style={{ marginTop: 10 }}>
         <List
           subjectTitle="Mechanics| 10 Chapters, 121 Videos"

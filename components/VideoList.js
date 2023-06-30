@@ -15,7 +15,7 @@ const VideoList = () => {
 
   return (
     <View>
-      <Header headerName="Living organization" icon={false} />
+      <Header headerName="Living organization" searchIcon={true} icon={false} />
       <View
         style={{
           backgroundColor: "#FFF",
