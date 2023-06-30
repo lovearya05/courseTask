@@ -101,7 +101,7 @@ const Video = ({ image }) => {
                 fontSize: 13,
                 color: "grey",
                 fontWeight: "600",
-                // marginLeft: 5,
+                marginLeft: 5,
               }}
             >
               9K WATCHED

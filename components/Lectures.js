@@ -16,8 +16,8 @@ const Lectures = () => {
           Show Only Pending Videos
         </Text>
         <Switch
-          trackColor={{ false: "#767577", true: "#81b0ff" }}
-          thumbColor={showPendingVideos ? "#f5dd4b" : "#f4f3f4"}
+          trackColor={{ false: "#ecebeb", true: "#0179fb" }}
+          thumbColor={showPendingVideos ? "#fff" : "#f4f3f4"}
           ios_backgroundColor="#3e3e3e"
           onValueChange={handleToggleSwitch}
           value={showPendingVideos}
