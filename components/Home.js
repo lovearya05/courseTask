@@ -7,9 +7,9 @@ import List from "./ListComponent/List";
 const Home = ({ navigation }) => {
   const [isClicked, setIsClicked] = useState(true);
 
-  const handlePress = () => {
-    setIsClicked(!isClicked);
-  };
+  // const handlePress = () => {
+  //   setIsClicked(!isClicked);
+  // };
   return (
     <View>
       <Header headerName="" icon={true} />
@@ -24,7 +24,7 @@ const Home = ({ navigation }) => {
       >
         <TouchableOpacity
           style={[!isClicked ? styles.designButton : null, { marginLeft: 10 }]}
-          onPress={handlePress}
+          onPress={()=>setIsClicked(false)}
         >
           <Text
             style={[
@@ -37,7 +37,7 @@ const Home = ({ navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={[isClicked ? styles.designButton : null, { marginLeft: 10 }]}
-          onPress={handlePress}
+          onPress={()=>setIsClicked(true)}
         >
           <Text
             style={[
@@ -49,6 +49,8 @@ const Home = ({ navigation }) => {
           </Text>
         </TouchableOpacity>
       </View>
+
+      {/* subject list  */}
       <View style={{ backgroundColor: "#EEE", padding: 5 }}></View>
       {isClicked ? (
         <View>
