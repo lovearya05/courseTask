@@ -18,14 +18,11 @@ const PlayVideo = () => {
 
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
 
       <Header headerName="" icon={true} />
 
       {/* navbar  */}
-      {/* <View style={{ backgroundColor: 'white', height: 80, justifyContent: 'center', flexDirection: "column-reverse" }} >
-        <AntDesign name="left" size={24} color="black" style={{ marginTop: 15, marginLeft: 15 }} />
-      </View> */}
 
       {/* video  */}
       <View style={styles.container}>
@@ -154,28 +151,28 @@ const PlayVideo = () => {
 
 
       {/* video description  */}
-      <View style={{ marginTop: 4}}>
+      <View style={{ marginTop: 4 }}>
 
         <Text style={{ fontSize: 20, padding: 18 }}>
           #1-GOC || Organic Compound || Berzelius Hypothesis || Wholer's Synthesis || Organic Chemistry | NEET
         </Text>
 
         {/* 3 buttons  */}
-        <View style={{ flexDirection: "row",justifyContent:"flex-start" }}>
+        <View style={{ flexDirection: "row", justifyContent: "flex-start" }}>
 
-          <View style={{...styles.threeButton, marginLeft: 22}}>
-            <AntDesign name="calendar" size={24} color="black" />
-            <Text style={{marginLeft:10}}>Save Notes</Text>
+          <View style={{ ...styles.threeButton, marginLeft: 22 }}>
+            <AntDesign name="calendar" size={24} color='rgba(1,1,1, 0.6)' />
+            <Text style={{ marginLeft: 10, color:'rgba(1,1,1, 0.6)' }}>Save Notes</Text>
           </View>
 
-          <View style={{...styles.threeButton, marginLeft: 10}}>
-            <Fontisto name="commenting" size={24} color="black" />
-            <Text style={{marginLeft:10}}>Comments(456)</Text>
+          <View style={{ ...styles.threeButton, marginLeft: 10 }}>
+            <Fontisto name="commenting" size={24} color='rgba(1,1,1, 0.6)' />
+            <Text style={{ marginLeft: 10, color:'rgba(1,1,1, 0.6)' }}>Comments(456)</Text>
           </View>
 
-          <View  style={{...styles.threeButton, marginLeft: 10}}>
-            <MaterialCommunityIcons name="share-outline" size={24} color="black" />
-            <Text style={{marginLeft:10}}>Share</Text>
+          <View style={{ ...styles.threeButton, marginLeft: 10 }}>
+            <MaterialCommunityIcons name="share-outline" size={24} color='rgba(1,1,1, 0.6)' />
+            <Text style={{ marginLeft: 10, color:'rgba(1,1,1, 0.6)' }}>Share</Text>
           </View>
         </View>
       </View>
@@ -183,16 +180,34 @@ const PlayVideo = () => {
 
       {/* upcoming video  */}
 
-      <View style={{ marginTop:25, marginLeft:20 }}>
-        <Text style={{fontSize:20, marginBottom:10}}>
+      <View style={{ flex: 1, marginTop: 25, marginLeft: 20 }}>
+        <Text style={{ fontSize: 20, marginBottom: 10 }}>
           Upcoming Videos
         </Text>
 
-        <UpcommingVideos/>
+        <UpcommingVideos />
       </View>
 
       {/* previous and next button  */}
 
+      <View style={{
+        flexDirection: "row"
+        , width: "100%", flex: 1, position: 'absolute', bottom: 0, backgroundColor: 'white', height: 50
+      }}>
+
+        <View style={{ flexDirection: "row", justifyContent: 'center', width: "50%", padding: 12 }}>
+          <Ionicons name="ios-caret-back" size={24} color="black" />
+          <Text style={{ fontSize: 18, marginLeft: 8 }}>Previous</Text>
+        </View>
+
+
+        <View style={{ flexDirection: "row", justifyContent: 'center', width: "50%", borderLeftWidth: 0.5, borderLeftColor: 'rgba(1, 1, 1, 0.5)', padding: 12 }}>
+          {/* <Ionicons name="ios-caret-back" size={24} color="black" />
+           */}
+          <Text style={{ fontSize: 18, }}>Next</Text>
+          <Ionicons name="ios-caret-forward-outline" size={24} color="black" style={{ marginLeft: 8 }} />
+        </View>
+      </View>
 
 
 
@@ -276,6 +291,7 @@ const styles = StyleSheet.create({
     // bottom: -22,
     // right:-410
   },
-  threeButton: { 
-    flexDirection: 'row', alignItems: 'center', borderColor: 'rgba(0, 0, 0, 0.3)', borderWidth: 1, borderRadius: 25, padding:10}
+  threeButton: {
+    flexDirection: 'row', alignItems: 'center', borderColor: 'rgba(0, 0, 0, 0.3)', borderWidth: 1, borderRadius: 25, padding: 10
+  }
 });
