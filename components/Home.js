@@ -12,7 +12,7 @@ const Home = ({ navigation }) => {
   };
   return (
     <View>
-      <Header icon={true} />
+      <Header headerName="" icon={true} />
       <View
         style={{
           backgroundColor: "#FFF",

@@ -62,6 +62,11 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
+          component={Home}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="VideoList"
           component={VideoList}
           options={{ headerShown: false }}
         />
