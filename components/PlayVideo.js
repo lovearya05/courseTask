@@ -9,196 +9,39 @@ import { Fontisto } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import UpcommingVideos from "./UpcommingVideos";
 import Header from "./Header";
+import YouTubePlayer from 'react-native-youtube-iframe';
+// import TestPlayer from "./TestPlayer";
 
 const PlayVideo = () => {
+
   const [currentTime, setCurrentTime] = useState(70);
+  const videoId = 'mpPjPkxt20U'
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor:'white' }}>
       <Header headerName="" searchIcon={false} icon={false} />
 
-      {/* navbar  */}
+      {/* team compititio  */}
 
-      {/* video  */}
-      <View style={styles.container}>
-        {/* Video Player */}
-        <View style={styles.videoContainer}>
-          <Image source={vidImage} style={styles.videoThumbnail} />
+      {/* <TestPlayer/> */}
 
-          {/* important and setting  */}
+      <View style={{ height:'29%' }}>
+        <YouTubePlayer
+          width={'100%'}
+          height={'100%'}
+          videoId={videoId}
+          play={true}
+        />
 
-          <View
-            style={{
-              position: "absolute",
-              top: -105,
-              width: "100%",
-              paddingLeft: 15,
-              paddingRight: 15,
-              justifyContent: "space-between",
-              // width: 420,
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            <Text
-              style={{
-                color: "white",
-                fontSize: 14,
-                backgroundColor: "rgba(0, 0, 0, 0.5)",
-                padding: 10,
-                borderRadius: 22,
-              }}
-            >
-              🔥 Important
-            </Text>
-            <TouchableOpacity>
-              <AntDesign name="setting" size={25} color="white" />
-            </TouchableOpacity>
-          </View>
-
-          {/* backward icon  */}
-
-          <View style={styles.playPauseButton}>
-            <TouchableOpacity
-              style={{
-                width: "33%",
-                transform: [{ rotateY: "180deg" }],
-              }}
-            >
-              <Fontisto
-                name="spinner-rotate-forward"
-                size={24}
-                color="white"
-                style={styles.playPauseIcon}
-              />
-            </TouchableOpacity>
-            {/* Play/Pause Button */}
-            <TouchableOpacity
-              style={{
-                width: "33%",
-                marginLeft: 40,
-              }}
-            >
-              <FontAwesome
-                name="pause"
-                size={24}
-                color="white"
-                style={styles.playPauseIcon}
-              />
-            </TouchableOpacity>
-
-            {/* forward button  */}
-            <TouchableOpacity
-              style={{
-                width: "33%",
-              }}
-            >
-              <Fontisto
-                name="spinner-rotate-forward"
-                size={24}
-                color="white"
-                style={styles.playPauseIcon}
-              />
-            </TouchableOpacity>
-          </View>
-
-          {/* Current Time */}
-          <Text style={styles.currentTimeText}>{"0:51"}</Text>
-          <Text
-            style={{
-              position: "absolute",
-              bottom: -62,
-              right: 19,
-              color: "#fff",
-              fontSize: 14,
-            }}
-          >
-            {"1:47:00"}
-          </Text>
-        </View>
-
-        {/* Other Controls */}
-
-        <View style={styles.controlsContainer}>
-          {/* Progress Bar */}
-          <View style={styles.progressBar}>
-            <View style={[styles.progressBarFill, { width: currentTime }]} />
-            <View
-              style={{
-                height: 12,
-                width: 12,
-                backgroundColor: "red",
-                borderRadius: 100,
-                top: -8,
-                left: currentTime,
-                // width: `${currentTime}%`,
-                // left: 100,
-              }}
-            ></View>
-          </View>
-
-          {/* Fullscreen Button */}
-        </View>
-
-        <View
-          style={{
-            flexDirection: "row",
-            marginTop: 38,
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-        >
-          <View style={{ display: "flex", flexDirection: "row" }}>
-            {/* play button  */}
-            <TouchableOpacity
-              style={{
-                width: 40,
-                height: 40,
-                marginLeft: 8,
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Ionicons name="ios-play" size={24} color="white" />
-            </TouchableOpacity>
-
-            {/* sound button  */}
-            <TouchableOpacity
-              style={{
-                width: 40,
-                height: 40,
-                marginLeft: 4,
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <AntDesign name="sound" size={24} color="white" />
-            </TouchableOpacity>
-
-            {/* time  */}
-
-            <Text style={{ alignSelf: "center", color: "#fff", marginLeft: 8 }}>
-              0:51/1:47:00
-            </Text>
-          </View>
-
-          <View>
-            {/* fullscreen icon  */}
-            <TouchableOpacity style={styles.fullscreenButton}>
-              <Octicons
-                name="screen-full"
-                size={24}
-                color="white"
-                style={styles.fullscreenIcon}
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
       </View>
 
+
+
+      {/* video  */}
+
+
       {/* video description  */}
-      <View style={{ marginTop: 4 }}>
+      <View style={{ marginTop: 0 }}>
         <Text style={{ fontSize: 20, padding: 18 }}>
           #1-GOC || Organic Compound || Berzelius Hypothesis || Wholer's
           Synthesis || Organic Chemistry | NEET
@@ -397,3 +240,185 @@ const styles = StyleSheet.create({
     // width: "30%",
   },
 });
+
+
+
+
+
+// {/* <View style={styles.container}>
+
+// {/* Video Player */}
+// <View style={styles.videoContainer}>
+//   <Image source={vidImage} style={styles.videoThumbnail} />
+
+//   {/* important and setting  */}
+
+//   <View
+//     style={{
+//       position: "absolute",
+//       top: -105,
+//       width: "100%",
+//       paddingLeft: 15,
+//       paddingRight: 15,
+//       justifyContent: "space-between",
+//       // width: 420,
+//       flexDirection: "row",
+//       alignItems: "center",
+//     }}
+//   >
+//     <Text
+//       style={{
+//         color: "white",
+//         fontSize: 14,
+//         backgroundColor: "rgba(0, 0, 0, 0.5)",
+//         padding: 10,
+//         borderRadius: 22,
+//       }}
+//     >
+//       🔥 Important
+//     </Text>
+//     <TouchableOpacity>
+//       <AntDesign name="setting" size={25} color="white" />
+//     </TouchableOpacity>
+//   </View>
+
+//   {/* backward icon  */}
+
+//   <View style={styles.playPauseButton}>
+//     <TouchableOpacity
+//       style={{
+//         width: "33%",
+//         transform: [{ rotateY: "180deg" }],
+//       }}
+//     >
+//       <Fontisto
+//         name="spinner-rotate-forward"
+//         size={24}
+//         color="white"
+//         style={styles.playPauseIcon}
+//       />
+//     </TouchableOpacity>
+//     {/* Play/Pause Button */}
+//     <TouchableOpacity
+//       style={{
+//         width: "33%",
+//         marginLeft: 40,
+//       }}
+//     >
+//       <FontAwesome
+//         name="pause"
+//         size={24}
+//         color="white"
+//         style={styles.playPauseIcon}
+//       />
+//     </TouchableOpacity>
+
+//     {/* forward button  */}
+//     <TouchableOpacity
+//       style={{
+//         width: "33%",
+//       }}
+//     >
+//       <Fontisto
+//         name="spinner-rotate-forward"
+//         size={24}
+//         color="white"
+//         style={styles.playPauseIcon}
+//       />
+//     </TouchableOpacity>
+//   </View>
+
+//   {/* Current Time */}
+//   <Text style={styles.currentTimeText}>{"0:51"}</Text>
+//   <Text
+//     style={{
+//       position: "absolute",
+//       bottom: -62,
+//       right: 19,
+//       color: "#fff",
+//       fontSize: 14,
+//     }}
+//   >
+//     {"1:47:00"}
+//   </Text>
+// </View>
+
+// {/* Other Controls */}
+
+// <View style={styles.controlsContainer}>
+//   {/* Progress Bar */}
+//   <View style={styles.progressBar}>
+//     <View style={[styles.progressBarFill, { width: currentTime }]} />
+//     <View
+//       style={{
+//         height: 12,
+//         width: 12,
+//         backgroundColor: "red",
+//         borderRadius: 100,
+//         top: -8,
+//         left: currentTime,
+//         // width: `${currentTime}%`,
+//         // left: 100,
+//       }}
+//     ></View>
+//   </View>
+
+//   {/* Fullscreen Button */}
+// </View>
+
+// <View
+//   style={{
+//     flexDirection: "row",
+//     marginTop: 38,
+//     display: "flex",
+//     justifyContent: "space-between",
+//     width: "100%",
+//   }}
+// >
+//   <View style={{ display: "flex", flexDirection: "row" }}>
+//     {/* play button  */}
+//     <TouchableOpacity
+//       style={{
+//         width: 40,
+//         height: 40,
+//         marginLeft: 8,
+//         justifyContent: "center",
+//         alignItems: "center",
+//       }}
+//     >
+//       <Ionicons name="ios-play" size={24} color="white" />
+//     </TouchableOpacity>
+
+//     {/* sound button  */}
+//     <TouchableOpacity
+//       style={{
+//         width: 40,
+//         height: 40,
+//         marginLeft: 4,
+//         justifyContent: "center",
+//         alignItems: "center",
+//       }}
+//     >
+//       <AntDesign name="sound" size={24} color="white" />
+//     </TouchableOpacity>
+
+//     {/* time  */}
+
+//     <Text style={{ alignSelf: "center", color: "#fff", marginLeft: 8 }}>
+//       0:51/1:47:00
+//     </Text>
+//   </View>
+
+//   <View>
+//     {/* fullscreen icon  */}
+//     <TouchableOpacity style={styles.fullscreenButton}>
+//       <Octicons
+//         name="screen-full"
+//         size={24}
+//         color="white"
+//         style={styles.fullscreenIcon}
+//       />
+//     </TouchableOpacity>
+//   </View>
+// </View>
+// </View> */}
