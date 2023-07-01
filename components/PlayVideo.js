@@ -15,7 +15,7 @@ import YouTubePlayer from 'react-native-youtube-iframe';
 const PlayVideo = () => {
 
   const [currentTime, setCurrentTime] = useState(70);
-  const videoId = 'mpPjPkxt20U'
+  const videoId = 'WtmJKp2Ib74'
 
   return (
     <View style={{ flex: 1, backgroundColor:'white' }}>
@@ -25,7 +25,7 @@ const PlayVideo = () => {
 
       {/* <TestPlayer/> */}
 
-      <View style={{ height:'29%' }}>
+      <View style={{ height:'28.5%' }}>
         <YouTubePlayer
           width={'100%'}
           height={'100%'}
@@ -119,6 +119,8 @@ const PlayVideo = () => {
             justifyContent: "center",
             width: "50%",
             padding: 12,
+            borderTopWidth :0.5,
+            borderTopColor: "rgba(1, 1, 1, 0.1)",
           }}
         >
           <Ionicons name="ios-caret-back" size={24} color="black" />
@@ -131,7 +133,10 @@ const PlayVideo = () => {
             justifyContent: "center",
             width: "50%",
             borderLeftWidth: 0.5,
+            borderTopWidth :0.5,
+            borderTopColor: "rgba(1, 1, 1, 0.1)",
             borderLeftColor: "rgba(1, 1, 1, 0.5)",
+            // shadowColor:"rgba(1, 1, 1, 0.5)",
             padding: 12,
           }}
         >
